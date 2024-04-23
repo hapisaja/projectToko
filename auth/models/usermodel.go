@@ -31,7 +31,7 @@ func (u UserModel) Where(user *entities.User, fieldName, fieldValue string) erro
 	defer row.Close()
 
 	for row.Next() {
-		row.Scan(&user.username, &user.nama, &user.password)
+		row.Scan(&user.Username, &user.Nama, &user.Password)
 	}
 	return nil
 }
