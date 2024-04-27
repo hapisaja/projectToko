@@ -10,6 +10,6 @@ func main() {
 	http.HandleFunc("/", authcontroller.Index)
 	http.HandleFunc("/login", authcontroller.Login)
 
-	fmt.Println("Server jalan di port 3000")
+	fmt.Println("Port 3000")
 	http.ListenAndServe(":3000", nil)
 }

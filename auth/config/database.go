@@ -5,12 +5,13 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func DBConnect() (db *sql.DB, err error) {
+func DBConn() (db *sql.DB, err error) {
 	dbDriver := "mysql"
 	dbUser := "root"
-	dbPassword := ""
+	dbPass := ""
 	dbName := "managementtoko"
 
-	db, err = sql.Open(dbDriver, dbUser+":"+dbPassword+"/@"+dbName)
+	db, err = sql.Open(dbDriver, dbUser+":"+dbPass+"@/"+dbName)
+
 	return
 }
