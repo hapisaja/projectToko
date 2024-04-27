@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../login/asset/css/style.css"/>
+    <title>VapeStore | Login Member</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="firstname">store</div>
+                <div class="lastname">name</div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">Home</a></li>
+                    <li><a href="#" class="link">Store</a></li>
+                    <li><a href="#" class="link">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="nav-menu-btn"> 
+                <i class="bx bx-menu" onclick="myMenuFunction()"><img src="../asset/icon/menu-regular-24.png" alt=""></i>
+            </div>
+        </nav>
+
+<!---------------------------------------Form Box----------------------------------------->
+
+        <div class="form-box">
+
+
+            <!---------------------------------------login----------------------------------------->
+            <div class="login-container" id="login">
+                <div class="top">
+                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                    <header>Sign In</header>
+                </div>              
+                <div class="input-box">
+                    <input type="text" class="input-field" name="loginUsername" placeholder="Username or Email">
+                    <i class="bx bx-user"><img src="../asset/icon/user-solid-24.png" alt=""></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" name="loginPw" placeholder="Password">
+                    <i class="bx bx-user"><img src="../asset/icon/lock-alt-solid-24.png" alt=""></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label for="forgotpw"><a href="#">Forgot Password</a></label>
+                        <input type="checkbox" name="forgotpw" id="forgotpw" />
+                    </div>
+                </div>
+            </div>  
+
+            <!---------------------------------------Register----------------------------------------->
+            <div class="register-container" id="register">
+                <div class="top">
+                    <span>Have an account? <a href="#" onclick="login()">Sign In</a></span>
+                    <header>Sign Up</header>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" name="firstname" placeholder="Firstname">
+                        <i class="bx bx-user"><img src="../asset/icon/user-solid-24.png" alt=""></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" name="lastname" placeholder="Lastname">
+                        <i class="bx bx-user"><img src="../asset/icon/user-solid-24.png" alt=""></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" name="username" autocomplete="off" placeholder="Username">
+                    <i class="bx bx-user"><img src="../asset/icon/user-solid-24.png" alt=""></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" name="email" autocomplete="off" placeholder="Email">
+                    <i class="bx bx-envelope"><img src="../asset/icon/envelope-regular-24.png" alt=""></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" name="whatsapp" placeholder="WhatsApp">
+                    <i class="bx bx-user"><img src="../asset/icon/whatsapp-logo-24.png" alt=""></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" name="password" placeholder="Password">
+                    <i class="bx bx-user"><img src="../asset/icon/lock-alt-solid-24.png" alt=""></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check">Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label for="terms"><a href="#">Terms & conditions</a></label>
+                        <input type="checkbox" name="terms" id="terms" />
+                    </div>
+                </div>
+            </div>               
+        </div>
+    </div>
+
+    <script>
+
+        function myMenuFunction() {
+            var h = document.getElementById("navMenu");
+
+            if (h.className === "nav.menu") {
+                i.className += "responsive";
+            } else {
+                h.className = "nav-menu";
+            }
+        }
+
+    </script>
+
+    <script>
+
+        var a = document.getElementById("loginBtn");
+        var b = document.getElementById("registerBtn");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+
+        function login() {
+            x.style.left = "4px";
+            y.style.right = "-520px";
+            a.className += " white-btn";
+            b.className = "btn";
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+
+        function register() {
+            x.style.left = "-510px";
+            y.style.right = "5px";
+            a.className = "btn";
+            b.className += " white-btn";
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+
+    </script>
+
+</body>
+</html>
